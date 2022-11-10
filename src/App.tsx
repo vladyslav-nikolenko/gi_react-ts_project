@@ -1,3 +1,5 @@
+import React from "react";
+import TestComponent from "./components/testComponent";
 export const App = () => {
   return (
     <div
@@ -10,7 +12,10 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+    <div>
+      <h3>gi_react-ts_project</h3>
+      <TestComponent/>
+      </div>
     </div>
   );
 };
