@@ -1,7 +1,10 @@
-import React, { FC } from 'react';
+import React from 'react';
 
-const TestComponent: FC = () => {
+// import React, { FC } from 'react';
+// const TestComponent: FC = () =>
+
+function TestComponent() {
   return <div>TestTsComponent</div>;
-};
+}
 
 export default TestComponent;

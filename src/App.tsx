@@ -1,6 +1,7 @@
 import React from 'react';
 import TestComponent from './components/testComponent';
-export const App = () => {
+
+function App() {
   return (
     <div
       style={{
@@ -18,4 +19,6 @@ export const App = () => {
       </div>
     </div>
   );
-};
+}
+
+export default App;
