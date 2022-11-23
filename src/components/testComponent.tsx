@@ -1,9 +1,6 @@
 import React from 'react';
 
-// import React, { FC } from 'react';
-// const TestComponent: FC = () =>
-
-function TestComponent() {
+function TestComponent(): JSX.Element {
   return <div>TestTsComponent</div>;
 }
 
