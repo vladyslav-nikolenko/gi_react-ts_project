@@ -1,14 +1,10 @@
-import React, {FC} from 'react';
+import React from 'react';
 
+// import React, { FC } from 'react';
+// const TestComponent: FC = () =>
 
-const TestComponent:FC = () => {
-
-  
-  return (
-     <div>
-        TestTsComponent
-    </div>
-  );
+function TestComponent() {
+  return <div>TestTsComponent</div>;
 }
 
 export default TestComponent;

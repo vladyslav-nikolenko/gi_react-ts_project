@@ -1,6 +1,7 @@
-import React from "react";
-import TestComponent from "./components/testComponent";
-export const App = () => {
+import React from 'react';
+import TestComponent from './components/testComponent';
+
+function App() {
   return (
     <div
       style={{
@@ -9,13 +10,15 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
       }}
     >
-    <div>
-      <h3>gi_react-ts_project</h3>
-      <TestComponent/>
+      <div>
+        <h3>gi_react-ts_project</h3>
+        <TestComponent />
       </div>
     </div>
   );
-};
+}
+
+export default App;
