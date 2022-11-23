@@ -1,7 +1,7 @@
 import React from 'react';
 import TestComponent from './components/testComponent';
 
-function App() {
+function App(): JSX.Element {
   return (
     <div
       style={{
