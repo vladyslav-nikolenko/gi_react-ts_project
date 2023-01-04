@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  Typography,
-  AppBar,
-  CssBaseline,
-  Button,
-  Box,
-  IconButton,
-  TextField,
-} from '@mui/material';
+import { AppBar, CssBaseline, Box, IconButton, TextField } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { Search } from '@mui/icons-material';
 import TheatersIcon from '@mui/icons-material/Theaters';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -26,7 +19,7 @@ function Header(): JSX.Element {
     <>
       <CssBaseline />
       <ThemeProvider theme={darkTheme}>
-        <AppBar color="primary" sx={{ height: '150px' }}>
+        <AppBar color="primary" sx={{ height: '150px', position: 'static' }}>
           <Box
             sx={{
               display: 'flex',
@@ -39,12 +32,10 @@ function Header(): JSX.Element {
                 display: 'flex',
               }}
             >
-              <TheatersIcon
-                sx={{
-                  marginTop: '3%',
-                }}
-              />
-              <Typography variant="h6">Filmoteka</Typography>
+              <Link to="/">
+                <TheatersIcon />
+                Filmoteka
+              </Link>
             </Box>
             <Box
               sx={{
@@ -52,22 +43,8 @@ function Header(): JSX.Element {
                 color: 'white',
               }}
             >
-              <Button
-                variant="text"
-                sx={{
-                  color: 'white',
-                }}
-              >
-                Home
-              </Button>
-              <Button
-                variant="text"
-                sx={{
-                  color: 'white',
-                }}
-              >
-                My Library
-              </Button>
+              <Link to="/">Home</Link>
+              <Link to="/myLibrary">My Library</Link>
             </Box>
           </Box>
           <Box display="flex" justifyContent="center">

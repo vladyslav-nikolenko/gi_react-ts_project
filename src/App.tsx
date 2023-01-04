@@ -1,11 +1,16 @@
 import React from 'react';
-import Header from './components/header';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Main from './components/main';
+import MyLibrary from './components/myLibrary';
 
 function App(): JSX.Element {
   return (
-    <div>
-      <Header />
-    </div>
+    <BrowserRouter basename="/gi_react-ts_project">
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/myLibrary" element={<MyLibrary />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
