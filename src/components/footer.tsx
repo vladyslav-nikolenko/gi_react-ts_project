@@ -11,8 +11,6 @@ function Footer(): JSX.Element {
         alignItems: 'center',
         height: '77px',
         backgroundColor: 'grey',
-        position: 'fixed',
-        bottom: '0',
         width: '100%',
       }}
     >
