@@ -1,9 +1,23 @@
-import { Typography } from '@mui/material';
+import { Typography, Box } from '@mui/material';
+
 import React from 'react';
 
 function Footer(): JSX.Element {
   return (
-    <Typography>© 2022 | All Rights Reserved | Developed with </Typography>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '77px',
+        backgroundColor: 'grey',
+        position: 'fixed',
+        bottom: '0',
+        width: '100%',
+      }}
+    >
+      <Typography>© 2022 | All Rights Reserved | Developed with </Typography>
+    </Box>
   );
 }
 
