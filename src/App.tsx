@@ -5,7 +5,6 @@ import MyLibrary from './components/myLibrary';
 import { filmsArray } from './mockCards';
 
 function App(): JSX.Element {
-  console.log(filmsArray, 'filmsArAPP');
   return (
     <BrowserRouter basename="/gi_react-ts_project">
       <Routes>

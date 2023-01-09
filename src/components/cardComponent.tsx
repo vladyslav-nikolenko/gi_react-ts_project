@@ -7,11 +7,11 @@ interface CardProps {
 }
 
 function CardComponent({ film }: CardProps): JSX.Element {
-  // console.log(typeof film, 'film');
   return (
     <Card
       sx={{
         width: '309px',
+        marginBottom: '32px',
       }}
     >
       <CardMedia

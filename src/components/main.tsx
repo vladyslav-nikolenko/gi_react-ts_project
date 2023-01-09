@@ -1,4 +1,5 @@
 import React from 'react';
+import { Box } from '@mui/material';
 import Footer from './footer';
 import Header from './header';
 import CardComponent from './cardComponent';
@@ -9,13 +10,21 @@ interface MainProps {
 }
 
 function Main({ filmsArray }: MainProps): JSX.Element {
-  // console.log(filmsArray, 'filmsArMAin');
   return (
     <div>
       <Header />
-      {filmsArray.map((film: ICard) => (
-        <CardComponent film={film} key={Math.random()} />
-      ))}
+      <Box
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'space-around',
+          padding: '60px 32px 160px 32px',
+        }}
+      >
+        {filmsArray.map((film: ICard) => (
+          <CardComponent film={film} key={Math.random()} />
+        ))}
+      </Box>
       <Footer />
     </div>
   );
