@@ -1,25 +1,29 @@
 import React from 'react';
 import { Card, CardMedia, CardContent, Typography, Box } from '@mui/material';
+import { ICard } from '../models';
 
-function CardComponent(): JSX.Element {
+interface CardProps {
+  film: ICard;
+}
+
+function CardComponent({ film }: CardProps): JSX.Element {
   return (
     <Card
       sx={{
         width: '309px',
+        marginBottom: '32px',
       }}
     >
       <CardMedia
         sx={{ height: 449 }}
-        image="https://fwcdn.pl/fpo/28/96/712896/7756000.3.jpg"
-        title="Mock Picture 1"
+        image={film.picture.image}
+        title={film.picture.title}
       />
       <CardContent>
-        <Typography sx={{ fontSize: 12 }}>Lizard</Typography>
+        <Typography sx={{ fontSize: 12 }}>{film.name}</Typography>
         <Box>
-          <Typography sx={{ fontSize: 12 }}>
-            Lizards are a widespread
-          </Typography>
-          <Typography sx={{ fontSize: 12 }}>10.0</Typography>
+          <Typography sx={{ fontSize: 12 }}>{film.description}</Typography>
+          {/* <Typography sx={{ fontSize: 12 }}>10.0</Typography> */}
         </Box>
       </CardContent>
     </Card>
