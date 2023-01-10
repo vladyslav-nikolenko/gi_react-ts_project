@@ -47,7 +47,8 @@
         "import/prefer-default-export": "off",
         "react/prop-types": "off",
         "linebreak-style":"off",
-        "object-curly-newline":"off"
+        "object-curly-newline":"off",
+        "arrow-parens": ["error", "as-needed"]
     },
     "settings": {
         "import/resolver": {
