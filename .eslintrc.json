@@ -41,7 +41,7 @@
             "allowExpressions": true
             }
             ],
-        "max-len": ["warn", { "code": 80 }],
+        "max-len": ["warn", { "code": 80 , "ignoreUrls": true} ],
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "import/prefer-default-export": "off",
@@ -49,7 +49,8 @@
         "linebreak-style":"off",
         "object-curly-newline":"off",
         "arrow-parens": ["error", "as-needed"],
-        "operator-linebreak": ["error", "after"]
+        "operator-linebreak": ["error", "after"],
+        "no-console":"off"
     },
     "settings": {
         "import/resolver": {
