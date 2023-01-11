@@ -48,7 +48,8 @@
         "react/prop-types": "off",
         "linebreak-style":"off",
         "object-curly-newline":"off",
-        "arrow-parens": ["error", "as-needed"]
+        "arrow-parens": ["error", "as-needed"],
+        "operator-linebreak": ["error", "after"]
     },
     "settings": {
         "import/resolver": {
