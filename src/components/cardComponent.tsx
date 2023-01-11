@@ -6,6 +6,8 @@ interface CardProps {
   film: ICard;
 }
 
+const baseUrlImg = 'https://image.tmdb.org/t/p/w500';
+
 function CardComponent({ film }: CardProps): JSX.Element {
   return (
     <Card
@@ -16,14 +18,16 @@ function CardComponent({ film }: CardProps): JSX.Element {
     >
       <CardMedia
         sx={{ height: 449 }}
-        image={film.picture.image}
-        title={film.picture.title}
+        image={baseUrlImg + film.poster_path}
+        title={film?.name || film?.original_name || film?.original_title}
       />
       <CardContent>
-        <Typography sx={{ fontSize: 12 }}>{film.name}</Typography>
+        <Typography sx={{ fontSize: 12 }}>
+          {film?.name || film?.title}
+        </Typography>
         <Box>
-          <Typography sx={{ fontSize: 12 }}>{film.description}</Typography>
-          {/* <Typography sx={{ fontSize: 12 }}>10.0</Typography> */}
+          {/* <Typography sx={{ fontSize: 12 }}>{film.overview}</Typography> */}
+          <Typography sx={{ fontSize: 12 }}>{film.vote_average}</Typography>
         </Box>
       </CardContent>
     </Card>

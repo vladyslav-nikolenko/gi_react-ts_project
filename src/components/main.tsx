@@ -8,7 +8,6 @@ import { ICard } from '../models';
 interface MainProps {
   filmsArray: ICard[];
 }
-
 function Main({ filmsArray }: MainProps): JSX.Element {
   return (
     <div>
