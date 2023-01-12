@@ -26,7 +26,6 @@ function CardComponent({ film }: CardProps): JSX.Element {
           {film?.name || film?.title}
         </Typography>
         <Box>
-          {/* <Typography sx={{ fontSize: 12 }}>{film.overview}</Typography> */}
           <Typography sx={{ fontSize: 12 }}>{film.vote_average}</Typography>
         </Box>
       </CardContent>
