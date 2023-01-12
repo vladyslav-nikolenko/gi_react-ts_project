@@ -50,7 +50,8 @@
         "object-curly-newline":"off",
         "arrow-parens": ["error", "as-needed"],
         "operator-linebreak": ["error", "after"],
-        "no-console":"off"
+        "no-console":"off",
+        "@typescript-eslint/no-explicit-any": "off" //?
     },
     "settings": {
         "import/resolver": {
