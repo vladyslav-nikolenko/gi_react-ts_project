@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Box, Pagination } from '@mui/material';
 import Footer from './footer';
 import Header from './header';
-import CardComponent from './cardComponent';
-import { ICard } from '../models';
+import PaginationComponent from './pagination';
+import CardList from './cardList';
 
 function Main(): JSX.Element {
   const [pages, setPages] = useState(10);
@@ -19,7 +18,6 @@ function Main(): JSX.Element {
         );
         setFilmsArray(res.data.results);
         setPages(res.data.total_pages);
-        console.log(res, 'res');
       };
       fetchFilms();
     } catch (error) {
@@ -27,35 +25,11 @@ function Main(): JSX.Element {
     }
   }, [currentPage]);
 
-  const handleChange: (page: number) => void = (page: number) => {
-    setCurrentPage(page);
-    window.scroll(0, 0);
-  };
   return (
     <div>
       <Header />
-      <Box
-        sx={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-around',
-          padding: '60px 32px 160px 32px',
-        }}
-      >
-        {filmsArray.map((film: ICard) => (
-          <CardComponent film={film} key={Math.random()} />
-        ))}
-      </Box>
-      <Pagination
-        onChange={(e: any) => handleChange(e.target.textContent)} // ?!
-        count={pages}
-        shape="rounded"
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          paddingBottom: '20px',
-        }}
-      />
+      <CardList filmsArray={filmsArray} />
+      <PaginationComponent setCurrentPage={setCurrentPage} pages={pages} />
       <Footer />
     </div>
   );

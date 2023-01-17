@@ -1,6 +1,5 @@
-import { Typography, Box } from '@mui/material';
-
 import React from 'react';
+import { Typography, Box } from '@mui/material';
 
 function Footer(): JSX.Element {
   return (
