@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AppBar, CssBaseline, Box, IconButton, TextField } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { Search } from '@mui/icons-material';
@@ -15,6 +15,11 @@ const darkTheme = createTheme({
 });
 
 function Header(): JSX.Element {
+  const [searchFilm, setSearchFilm] = useState('');
+  function onChange(e: string): void {
+    setSearchFilm(e);
+  }
+
   return (
     <>
       <CssBaseline />
@@ -49,20 +54,24 @@ function Header(): JSX.Element {
           </Box>
           <Box display="flex" justifyContent="center">
             <TextField
+              value={searchFilm}
               inputProps={{ 'aria-label': 'search' }}
               label="Search films"
               type="search"
               variant="standard"
+              onChange={e => onChange(e.target.value)}
             />
-            <IconButton
-              type="button"
-              aria-label="search"
-              sx={{
-                marginTop: '1.4%',
-              }}
-            >
-              <Search />
-            </IconButton>
+            <Link to={`../search/${searchFilm}`}>
+              <IconButton
+                type="button"
+                aria-label="search"
+                sx={{
+                  marginTop: '1.4%',
+                }}
+              >
+                <Search />
+              </IconButton>
+            </Link>
           </Box>
         </AppBar>
       </ThemeProvider>
